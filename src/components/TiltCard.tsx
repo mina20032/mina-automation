@@ -1,33 +1,23 @@
-'use client';
+"use client";
 
 import { motion } from "framer-motion";
-import { useMotionValue, useTransform } from "framer-motion";
 
-export default function TiltCard({ title, desc }) {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+interface TiltCardProps {
+  title: string;
+  description: string;
+}
 
-  const rotateX = useTransform(y, [0, 300], [10, -10]);
-  const rotateY = useTransform(x, [0, 300], [-10, 10]);
-
+export default function TiltCard({ title, description }: TiltCardProps) {
   return (
     <motion.div
-      className="card p-8 rounded-2xl bg-white/5 border border-blue-500/30 backdrop-blur-xl shadow-[0_0_30px_rgba(0,150,255,0.2)]"
-      style={{ rotateX, rotateY }}
-      onMouseMove={(e) => {
-        x.set(e.clientX);
-        y.set(e.clientY);
-      }}
-      onMouseLeave={() => {
-        x.set(150);
-        y.set(150);
-      }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      whileHover={{ scale: 1.03 }}
+      className="bg-[#0f172a] border border-white/10 rounded-xl p-6 shadow-xl hover:shadow-2xl hover:border-blue-400/40 transition-all"
     >
-      <h3 className="text-3xl font-bold text-blue-300 drop-shadow-[0_0_10px_rgba(0,150,255,.6)]">
-        {title}
-      </h3>
-
-      <p className="mt-3 text-gray-300 leading-relaxed">{desc}</p>
+      <h2 className="text-2xl font-bold text-white mb-3">{title}</h2>
+      <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
     </motion.div>
   );
 }
