@@ -25,9 +25,9 @@ export default function ContactPage() {
         </motion.p>
 
         <div className="space-y-4 text-lg">
-          <p>📩 Email: <span className="text-blue-400">mina.mamdouh.dev@gmail.com</span></p>
-          <p>💼 LinkedIn: <span className="text-blue-400">linkedin.com/in/mina-mamdouh</span></p>
-          <p>💬 WhatsApp: <span className="text-blue-400">+20 10 000 00000</span></p>
+          <p>📩 Email: <span className="text-blue-400">mano.devloper@gmail.com</span></p>
+          <p>💼 LinkedIn: <span className="text-blue-400">https://www.linkedin.com/in/mina-mamdouh14/</span></p>
+          <p>💬 WhatsApp: <span className="text-blue-400">+20 12 7653 5995</span></p>
         </div>
       </div>
     </PageTransition>
