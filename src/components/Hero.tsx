@@ -62,7 +62,7 @@ export default function Hero() {
           <motion.a
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.98 }}
-            href="#projects"
+            href="/projects"
             className="px-8 py-3 rounded-xl bg-blue-600/40 border border-blue-400/40 text-blue-200 font-semibold backdrop-blur-md shadow-[0_0_20px_rgba(0,140,255,.4)] hover:bg-blue-600/60 transition"
           >
             View Projects
