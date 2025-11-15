@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #020617; /* navy dark */
+  color: white;
+  margin: 0;
+  padding: 0;
+  cursor: none; /* لأن عندنا NeonCursor */
+}
+
+html {
+  scroll-behavior: smooth;
+}
