@@ -1,13 +1,12 @@
-import Hero from "../components/Hero";
+"use client";
 
-export default function Home() {
+import Hero from "@/components/Hero";
+import PageTransition from "@/components/PageTransition";
+
+export default function HomePage() {
   return (
-    <div>
+    <PageTransition>
       <Hero />
-
-      <div className="mt-32 text-center text-gray-300 text-xl">
-        <p>Scroll down to explore my work 👇</p>
-      </div>
-    </div>
+    </PageTransition>
   );
 }
