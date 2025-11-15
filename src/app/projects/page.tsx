@@ -1,80 +1,33 @@
-"use client";
+import TechStack from "@/components/TechStack";
+import Testimonials from "@/components/Testimonials";
+import DownloadCV from "@/components/DownloadCV";
+import Experience from "@/components/Experience";
 
-import TiltCard from "@/components/TiltCard";
-import PageTransition from "@/components/PageTransition";
-
-export default function ProjectsPage() {
+export default function Home() {
   return (
-    <PageTransition>
-      <div className="max-w-6xl mx-auto py-20 px-6">
-        <h1 className="text-4xl font-bold text-white mb-10">
-          Featured Projects
-        </h1>
+    <div className="space-y-20">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <Hero />
 
-          <TiltCard
-            title="JavaFX Attendance System (QR Code)"
-            description="QR attendance, student registration, SQLite DB, PDF & Excel reports."
-          />
+      <section className="max-w-5xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-blue-300 mb-6">Tech Stack</h2>
+        <TechStack />
+      </section>
 
-          <TiltCard
-            title="Smart Filter Pro – WooCommerce Plugin"
-            description="Dynamic filters, drag-and-drop builder, icons, AJAX results, live preview."
-          />
+      <section className="max-w-5xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-blue-300 mb-6">Experience</h2>
+        <Experience />
+      </section>
 
-          <TiltCard
-            title="Recommendations Engine Plugin"
-            description="AI-like product recommendation system shown in product + cart pages."
-          />
+      <section className="max-w-5xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-blue-300 mb-6">Testimonials</h2>
+        <Testimonials />
+      </section>
 
-          <TiltCard
-            title="Real-Time Java Chat App (TCP)"
-            description="Two-way communication, sockets, GUI with JavaFX, real-time messaging."
-          />
+      <section className="max-w-5xl mx-auto px-6 text-center">
+        <DownloadCV />
+      </section>
 
-          <TiltCard
-            title="C++ Library Management System"
-            description="GUI system with full CRUD, SQL DB, Excel/Text export, print manager."
-          />
-
-          <TiltCard
-            title="OCR Discord Bot"
-            description="Extracts text from images, reads Arabic names, sends to WhatsApp automatically."
-          />
-
-          <TiltCard
-            title="E-Commerce Dashboard Website"
-            description="Advanced UI with Tailwind + Charts, real-time stats, client-ready design."
-          />
-
-          <TiltCard
-            title="Cloudflare DNS Manager"
-            description="Automated DNS creation, IP rotation, API-integrated with Cloudflare."
-          />
-
-          <TiltCard
-            title="Meta Ads ROAS Dashboard"
-            description="Calculates realtime ROAS, integrates WooCommerce revenue + Meta Ads API."
-          />
-
-          <TiltCard
-            title="Shopify/WooCommerce Scraper"
-            description="Scrapes products, prices, variations, images & uploads to Google Sheets."
-          />
-
-          <TiltCard
-            title="Automated WooCommerce Pipeline"
-            description="Daily revenue reports, auto screenshots, WhatsApp alerts, Discord reporting."
-          />
-
-          <TiltCard
-            title="Facebook Ads Billing Tracker"
-            description="Auto-login, scrapes billing pages, extracts daily spend & updates Sheets."
-          />
-
-        </div>
-      </div>
-    </PageTransition>
+    </div>
   );
 }
