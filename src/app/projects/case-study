@@ -1,0 +1,31 @@
+"use client";
+
+export default function CaseStudy() {
+  return (
+    <div className="max-w-4xl mx-auto py-20 px-6 space-y-10">
+      <h1 className="text-4xl font-bold text-blue-300">WhatsApp Automation Case Study</h1>
+
+      <section>
+        <h2 className="text-2xl font-semibold text-white">Problem</h2>
+        <p className="text-gray-300 mt-2">
+          COD orders had 40% unconfirmed rate causing massive delivery loss.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold text-white">Solution</h2>
+        <p className="text-gray-300 mt-2">
+          Built automation using Python + UltraMSG to confirm orders, detect wrong numbers,
+          update Sheets, and send alerts.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold text-white">Impact</h2>
+        <p className="text-gray-300 mt-2">
+          Reduced unconfirmed COD orders by 27% in the first month.
+        </p>
+      </section>
+    </div>
+  );
+}
